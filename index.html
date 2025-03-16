@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <!-- daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Bangla:ital@0;1&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- vanilla css -->
+    <style>
+        .poppins{
+            font-family: "Poppins", sans-serif;
+        }
+        .hind-siliguri{
+            font-family: "Hind Siliguri", sans-serif;
+        }
+        .tiro-bangla{
+            font-family: "Tiro Bangla", serif;
+        }
+        .inter{
+            font-family: "Inter", sans-serif;
+        }
+        .active{
+            background-color: #422AD5;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body class="poppins ">
+    <header id="hide-header" class="bg-gray-100 sticky top-0 z-10">
+        <nav class="container mx-auto flex justify-between items-center py-7">
+            <!-- left side -->
+            <div class="flex items-center">
+                <h2 class="font-semibold text-xl text-[#18181B]">English</h2>
+                <img src="assets/logo.png" alt="">
+                <h2 class="tiro-bangla text-xl">জানালা</h2>
+            </div>
+
+            <!-- right side -->
+            <div class="flex gap-4">
+                <a href="#faq"><button class="btn btn-outline btn-primary "><i class="fa-solid fa-circle-question"></i>
+                    FAQ</button>
+                </a>
+
+                <a href="#Vocabularies">
+                    <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Learn</button>
+                </a>
+
+                <button class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>                
+            </div>
+        </nav>
+        <hr class="border-[#C6BDBD]">
+
+    </header>
+
+    
+
+    <!-- bennar section -->
+    <section id="hide-banner" class="container mx-auto flex justify-between items-center mb-20">
+        <!-- left side -->
+        <div >
+            <h1 class="font-bold text-5xl text-[#18181B]"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+            <p class="my-6 hind-siliguri font-medium text-2xl text-[#18181B] opacity-80">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive
+            Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+            <input id="name" type="text" placeholder="Enter Your Name" class="input" /> <br><br>
+            <input id="pass" value="123456" type="password" placeholder="Enter Login code (123456)" class="input" /> <br><br>
+            <button id="login" class="btn btn-primary">Get Started</button>
+        </div>
+    
+        <!-- right side -->
+        <img src="assets/hero-student.png" alt="">
+    </section>
+
+    <main id="hide-main">
+        <!-- section-2 Let's Learn Vocabularies -->
+        <section id="Vocabularies" class="container mx-auto pt-32 mb-20">
+            <h1 class="text-center font-bold text-3xl text-[#18181B] mb-10"><span class="text-[#00BCFF]">Let's</span>
+                Learn Vocabularies</h1>
+
+                <!-- dynamic button -->
+                <section id="level-container" class="flex justify-center items-center gap-5 mb-10">
+                    <!-- <div>
+                        <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Lesson-1</button>
+                    </div> -->
+                </section>
+
+                <!-- loader -->
+                <section id="loader" class="text-center hidden">
+                    <span class="loading loading-dots loading-xl"></span>
+                </section>
+
+                <!-- dynamic button er display part -->
+                
+
+                <!-- btn press korlee -->
+                <section id="card-container" class="grid grid-cols-3 gap-7 bg-[#F8F8F8] rounded-3xl p-7">
+                    <!-- kono kichu select na korle -->
+                    <div class="col-span-full text-center py-16 bg-[#F8F8F8] rounded-3xl">
+                        <p class="hind-siliguri text-sm text-[#79716B] mb-3">আপনি এখনো কোন Lesson Select করেন নি</p>
+                        <h2 class="hind-siliguri text-4xl font-medium text-[#292524]">একটি Lesson Select করুন।</h2>
+                    </div>
+
+                    
+                    
+
+                    
+                </section>
+        </section>
+
+        <!-- section-3 Frequently Asked Questions -->
+        <section id="faq" class="container mx-auto mb-52 pt-32">
+            <h1 class="text-center font-bold text-3xl text-[#18181B] mt-6 mb-20"><span class="text-[#00BCFF]">Frequently</span> Asked Questions</h1>
+
+            <!-- accordion template -->
+            <div class="space-y-5">
+                <!-- question-1 -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title font-semibold">1. What is the difference between var, let, and const?</div>
+                    <div class="collapse-content text-sm">In JavaScript, var, let, and const are used for variable declaration but have key differences. var is function-scoped,
+                    allows re-declaration, and is hoisted with undefined, making it less reliable. let is block-scoped, does not allow
+                    re-declaration, but can be reassigned. const is also block-scoped but cannot be reassigned, making it ideal for
+                    constants. While var is outdated and can cause issues, let is useful for mutable values, and const is the preferred
+                    choice for most cases. Best practice is to use const by default and let only when necessary.</div>
+                </div>
+
+                <!-- question-2 -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">2. What is the difference between map(), forEach(), and filter()</div>
+                    <div class="collapse-content text-sm">In JavaScript, map(), forEach(), and filter() are array methods used for iterating over elements but serve different
+                    purposes. map() creates a new array by applying a function to each element, making it useful when transformation is
+                    needed. forEach() simply executes a function for each element without returning a new array, making it ideal for
+                    performing side effects like logging or updating values. filter() creates a new array containing only elements that pass
+                    a given condition, making it useful for data filtering. While map() and filter() return new arrays, forEach() does not,
+                    so map() is preferred when transformation is needed, filter() for extracting specific elements, and forEach() for
+                    operations without needing a returned array.</div>
+                </div>
+
+                <!-- question-3 -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">3. What are arrow functions and how they are different from regular functions?</div>
+                    <div class="collapse-content text-sm">Arrow functions in JavaScript are a shorter and more concise way to write functions using the => syntax. Unlike regular
+                    functions, arrow functions do not have their own this value; instead, they inherit this from their surrounding scope,
+                    making them useful in callbacks and event handlers. They also do not have their own arguments object and cannot be used
+                    as constructors with new. Regular functions, on the other hand, have their own this, making them more flexible for
+                    object methods and dynamic context binding. Arrow functions are best for short, simple functions, while regular
+                    functions are better when this or arguments is needed.</div>
+                </div>
+
+                <!-- question-4 -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">4. How JavaScript Promises work?</div>
+                    <div class="collapse-content text-sm">JavaScript Promises handle asynchronous operations by representing a future value with three states: pending, fulfilled,
+                    and rejected. They use .then() to handle success, .catch() for errors, and .finally() for cleanup. A Promise is created
+                    using new Promise((resolve, reject) => { ... }), where resolve() is called on success and reject() on failure. Promises
+                    prevent callback hell and allow chaining for cleaner, more readable code.</div>
+                </div>
+
+                <!-- question-5 -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">5. How closures work in JavaScript?</div>
+                    <div class="collapse-content text-sm">A closure in JavaScript is a function that retains access to variables from its outer (enclosing) function, even after
+                    the outer function has finished executing. This happens because the inner function "remembers" the scope in which it was
+                    created. Closures are useful for data encapsulation, maintaining state, and handling callbacks.</div>
+                </div>
+            </div>
+        </section>
+        <hr class="border-[#FFEBEB]">
+    </main>
+
+    <footer id="hide-footer" class="container mx-auto flex justify-between items-center">
+        <!-- left side -->
+        <div class="py-24">
+            <div class="flex items-center">
+                <h2 class="font-semibold text-xl text-[#18181B]">English</h2>
+                <img src="assets/logo.png" alt="">
+                <h2 class="tiro-bangla text-xl">জানালা</h2>
+            </div>
+            <p class="mt-5 mb-2 font-medium text-xl hind-siliguri">ইংরেজি শিখুন সহজে</p>
+            <p class="hind-siliguri">Providing ED-Tech Applications since 2025</p>
+        </div>
+
+        <!-- right side -->
+        <div>
+            <p class="font-semibold text-sm text-[#18181B] mb-4 opacity-60">Follow us</p>
+            <div class="flex gap-4 items-center">
+                <a href="https://www.facebook.com/moshiurict24" target="_blank"><img src="assets/fb-thumb.png" alt=""></a>
+                <a href="https://www.youtube.com/@moshiur_01" target="_blank"><img src="assets/youtube-thumb.png" alt=""></a>
+                
+                <a href="https://www.instagram.com/moshiur_ict24/" target="_blank"><img src="assets/instagram-thumb.png" alt=""></a>
+                
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+    <dialog id="card_details" class="modal">
+        <div class="modal-box">
+            <div id="details-container" class="">
+                
+        
+            </div>
+            <div>
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-primary rounded-xl text-white">Complete Learning</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="index.js"></script>
+</body>
+</html>
