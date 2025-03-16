@@ -75,14 +75,14 @@ function displayCard(datas){
     }
 
     for(let dt of datas){
-        //console.log(dt.id)
+        //console.log(dt.word)
         const div = document.createElement("div");
         div.innerHTML = `
-            <div class="p-20 text-center bg-white rounded-xl inter">
-                        <h2 class="font-bold text-3xl">${dt.word}</h2>
-                        <p class="py-6 font-medium text-xl">Meaning /Pronounciation</p>
-                        <h2 class="hind-siliguri font-semibold text-3xl text-[#18181B]">"${dt.meaning != null ? `${dt.meaning}` : `অর্থ নেই`} / ${dt.pronunciation}"</h2>
-                        <div class="mt-20 flex justify-between items-center">
+            <div class="p-10 text-center bg-white rounded-xl inter shadow hover:bg-sky-50">
+                        <h2 class="font-bold text-2xl">${dt.word}</h2>
+                        <p class="py-3 font-medium text-xl">Meaning /Pronounciation</p>
+                        <h2 class="hind-siliguri font-semibold text-xl text-[#18181B]">"${dt.meaning != null ? `${dt.meaning}` : `অর্থ নেই`} / ${dt.pronunciation}"</h2>
+                        <div class="mt-10 flex justify-between items-center">
                             <button onclick="loadCardDetails(${dt.id})" class="btn bg-[#1A91FF10] border-none"><i class="fa-solid fa-circle-info"></i></button>
                             <button class="btn bg-[#1A91FF10] border-none"><i class="fa-solid fa-volume-high"></i></button>
                         </div>
@@ -115,22 +115,21 @@ function loadCardDetails(cardId){
 }
 
 function displayCardDetails(details){
-    console.log(details.word);
     document.getElementById("card_details").showModal();
     const detailsContainer = document.getElementById("details-container");
     detailsContainer.innerHTML = `
         <div class="p-6 border border-[#EDF7FF] rounded-xl mb-6">
-                    <h1 class="poppins font-semibold text-4xl mb-8">${details.word} (<i class="fa-solid fa-volume-low"></i> :${details.pronunciation})</h1>
-                    <h2 class="poppins font-semibold text-2xl mb-2">Meaning</h2>
-                    <h2 class="hind-siliguri font-medium text-2xl mb-8">${details.meaning == true ? `${details.meaning}` : `অর্থ পাওয়া যায়নি`}</h2>
-                    <h2 class="poppins font-semibold text-2xl mb-2">Example</h2>
-                    <p class="poppins text-2xl mb-8">${details.sentence}</p>
-                    <h2 class="hind-siliguri font-medium text-2xl mb-2">সমার্থক শব্দ গুলো</h2>
+                    <h1 class="poppins font-semibold text-2xl mb-5">${details.word} (<i class="fa-solid fa-volume-low"></i> :${details.pronunciation})</h1>
+                    <h2 class="poppins font-semibold text-xl mb-1">Meaning</h2>
+                    <h2 class="hind-siliguri font-medium text-xl mb-5">${details.meaning != null ? `${details.meaning}` : `অর্থ পাওয়া যায়নি`}</h2>
+                    <h2 class="poppins font-semibold text-xl mb-1">Example</h2>
+                    <p class="poppins text-xl mb-5">${details.sentence}</p>
+                    <h2 class="hind-siliguri font-medium text-xl mb-1">সমার্থক শব্দ গুলো</h2>
                     
                     ${details.synonyms.length != 0 ? `<div class="flex gap-5 opacity-80 poppins text-xl ">
-                        <button class="btn bg-[#EDF7FF]">${details.synonyms[0]}</button>
-                        <button class="btn bg-[#EDF7FF]">${details.synonyms[1]}</button>
-                        <button class="btn bg-[#EDF7FF]">${details.synonyms[2]}</button>
+                        <button class="btn hover:bg-white bg-[#EDF7FF]">${details.synonyms[0]}</button>
+                        <button class="btn hover:bg-white bg-[#EDF7FF]">${details.synonyms[1]}</button>
+                        <button class="btn hover:bg-white bg-[#EDF7FF]">${details.synonyms[2]}</button>
                         </div>` : ``}
                     
                 </div>
@@ -160,10 +159,33 @@ document.getElementById("login").addEventListener("click",
             document.getElementById("hide-banner").style.display = "none";
             document.getElementById("hide-header").style.display = "block";
             document.getElementById("hide-main").style.display = "block";
+            //alert("Login Successfull !!!")
+
+            // sweet alert....
+            Swal.fire({
+                title: "অভিনন্দন",
+                text: "চলুন আজ নতুন কিছু শেখা যাক",
+                icon: "success",
+                confirmButtonText: "OK"
+            })
+            
+
         }
         else{
             alert("Wrong Password. Contact admin to get your Login Code");
         }
+    }
+)
+
+document.getElementById("logout").addEventListener("click",
+    function (event) {
+        //event.preventDefault();
+        document.getElementById("hide-banner").style.display = "flex";
+        document.getElementById("hide-header").style.display = "none";
+        document.getElementById("hide-main").style.display = "none";
+
+        //console.log(pass)
+
     }
 )
 
@@ -178,3 +200,12 @@ const hideLoader = () => {
     document.getElementById("loader").classList.add("hidden");
     document.getElementById("card-container").classList.remove("hidden");
 }
+
+
+// pronunciation
+// function pronounceWord(word) {
+//     console.log(word);
+//     const utterance = new SpeechSynthesisUtterance(word);
+//     utterance.lang = 'en-EN'; // English
+//     window.speechSynthesis.speak(utterance);
+// }

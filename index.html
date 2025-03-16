@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- vanilla css -->
     <style>
         .poppins{
@@ -58,7 +61,7 @@
                     <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Learn</button>
                 </a>
 
-                <button class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>                
+                <button id="logout" class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>                
             </div>
         </nav>
         <hr class="border-[#C6BDBD]">
@@ -74,9 +77,11 @@
             <h1 class="font-bold text-5xl text-[#18181B]"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
             <p class="my-6 hind-siliguri font-medium text-2xl text-[#18181B] opacity-80">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive
             Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-            <input id="name" type="text" placeholder="Enter Your Name" class="input" /> <br><br>
-            <input id="pass" value="123456" type="password" placeholder="Enter Login code (123456)" class="input" /> <br><br>
-            <button id="login" class="btn btn-primary">Get Started</button>
+            <form id="loginForm">
+                <input id="name" type="text" placeholder="Enter Your Name" class="input" /> <br><br>
+                <input id="pass" type="password" placeholder="Enter Login code (123456)" class="input" /> <br><br>
+                <button id="login" class="btn btn-primary">Get Started</button>
+            </form>
         </div>
     
         <!-- right side -->
@@ -181,7 +186,7 @@
                 </div>
             </div>
         </section>
-        <hr class="border-[#FFEBEB]">
+        <hr class="border-[#FFEBEB] border-2">
     </main>
 
     <footer id="hide-footer" class="container mx-auto flex justify-between items-center">
@@ -200,10 +205,13 @@
         <div>
             <p class="font-semibold text-sm text-[#18181B] mb-4 opacity-60">Follow us</p>
             <div class="flex gap-4 items-center">
-                <a href="https://www.facebook.com/moshiurict24" target="_blank"><img src="assets/fb-thumb.png" alt=""></a>
-                <a href="https://www.youtube.com/@moshiur_01" target="_blank"><img src="assets/youtube-thumb.png" alt=""></a>
+                <a class="hover:text-blue-800 text-3xl" href="https://www.facebook.com/moshiurict24" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+
+                <a class="hover:text-red-700 text-3xl" href="https://www.youtube.com/@moshiur_01" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 
-                <a href="https://www.instagram.com/moshiur_ict24/" target="_blank"><img src="assets/instagram-thumb.png" alt=""></a>
+                <a class="hover:text-rose-500 text-3xl" href="https://www.instagram.com/moshiur_ict24/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+                <a class="hover:text-black text-3xl" href="https://github.com/Moshiur-Rahman-01" target="_blank"><i class="fa-brands fa-github"></i></a>
                 
             </div>
         </div>
@@ -213,7 +221,7 @@
     <!-- Open the modal using ID.showModal() method -->
     <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
     <dialog id="card_details" class="modal">
-        <div class="modal-box">
+        <div class="modal-box ">
             <div id="details-container" class="">
                 
         
