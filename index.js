@@ -154,10 +154,12 @@ document.getElementById("login").addEventListener("click",
         const pass = document.getElementById("pass").value;
         //console.log(pass)
         if(name == false){
-            alert("Please Tell use your Name first")
+            pronounceWord("Please, Enter Your Name");
+            alert("Please Tell use your Name first");
         }
         else if(pass == 123456){
             //console.log(pass)
+            pronounceWord("You are Welcome !");
             document.getElementById("hide-banner").style.display = "none";
             document.getElementById("hide-header").style.display = "block";
             document.getElementById("hide-main").style.display = "block";
@@ -174,6 +176,7 @@ document.getElementById("login").addEventListener("click",
 
         }
         else{
+            pronounceWord("Your Password is wrong. Please, Enter Your right password");
             alert("Wrong Password. Contact admin to get your Login Code");
         }
     }
@@ -181,7 +184,8 @@ document.getElementById("login").addEventListener("click",
 
 document.getElementById("logout").addEventListener("click",
     function (event) {
-        //event.preventDefault();
+        event.preventDefault();
+        pronounceWord("Logout Successfully. thank you. please, come again");
         document.getElementById("hide-banner").style.display = "flex";
         document.getElementById("hide-header").style.display = "none";
         document.getElementById("hide-main").style.display = "none";
