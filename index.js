@@ -167,6 +167,7 @@ document.getElementById("login").addEventListener("click",
 
             // sweet alert....
             Swal.fire({
+                width: "350px",
                 title: "অভিনন্দন",
                 text: "চলুন আজ নতুন কিছু শেখা যাক",
                 icon: "success",
@@ -182,7 +183,20 @@ document.getElementById("login").addEventListener("click",
     }
 )
 
-document.getElementById("logout").addEventListener("click",
+document.getElementById("logout-1").addEventListener("click",
+    function (event) {
+        event.preventDefault();
+        pronounceWord("Logout Successfully. thank you. please, come again");
+        document.getElementById("hide-banner").style.display = "flex";
+        document.getElementById("hide-header").style.display = "none";
+        document.getElementById("hide-main").style.display = "none";
+
+        //console.log(pass)
+
+    }
+)
+
+document.getElementById("logout-2").addEventListener("click",
     function (event) {
         event.preventDefault();
         pronounceWord("Logout Successfully. thank you. please, come again");
