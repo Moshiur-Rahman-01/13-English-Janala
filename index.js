@@ -67,7 +67,7 @@ function displayCard(datas){
                     <img class="mb-4" src="assets/alert-error.png" alt="">
                 </div>
                 <p class="hind-siliguri text-sm text-[#79716B] mb-3">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয় নি ।</p>
-                <h2 class="hind-siliguri text-4xl font-medium text-[#292524]">নেক্সট Lesson এ যান</h2>
+                <h2 class="hind-siliguri sm:text-4xl text-2xl font-medium text-[#292524]">নেক্সট Lesson এ যান</h2>
             </div>
         `
         hideLoader();
@@ -76,6 +76,8 @@ function displayCard(datas){
 
     for(let dt of datas){
         //console.log(dt.word)
+        //let p = dt.word;
+        //console.log(p)
         const div = document.createElement("div");
         div.innerHTML = `
             <div class="p-10 text-center bg-white rounded-xl inter shadow hover:bg-sky-50">
@@ -84,7 +86,7 @@ function displayCard(datas){
                         <h2 class="hind-siliguri font-semibold text-xl text-[#18181B]">"${dt.meaning != null ? `${dt.meaning}` : `অর্থ নেই`} / ${dt.pronunciation}"</h2>
                         <div class="mt-10 flex justify-between items-center">
                             <button onclick="loadCardDetails(${dt.id})" class="btn bg-[#1A91FF10] border-none"><i class="fa-solid fa-circle-info"></i></button>
-                            <button class="btn bg-[#1A91FF10] border-none"><i class="fa-solid fa-volume-high"></i></button>
+                            <button onclick="pronounceWord(${dt.word})" class="btn bg-[#1A91FF10] border-none"><i class="fa-solid fa-volume-high"></i></button>
                         </div>
                     </div>
         `
@@ -203,9 +205,19 @@ const hideLoader = () => {
 
 
 // pronunciation
+function pronounceWord(word) {
+    console.log(word);
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-EN'; // English
+    window.speechSynthesis.speak(utterance);
+}
+
 // function pronounceWord(word) {
-//     console.log(word);
-//     const utterance = new SpeechSynthesisUtterance(word);
-//     utterance.lang = 'en-EN'; // English
-//     window.speechSynthesis.speak(utterance);
+//     if ('speechSynthesis' in window) {
+//         const utterance = new SpeechSynthesisUtterance(word);
+//         utterance.lang = 'en-US';
+//         window.speechSynthesis.speak(utterance);
+//     } else {
+//         console.error('Speech Synthesis API is not supported in this browser.');
+//     }
 // }

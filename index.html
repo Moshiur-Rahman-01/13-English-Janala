@@ -43,39 +43,58 @@
 </head>
 <body class="poppins ">
     <header id="hide-header" class="bg-gray-100 sticky top-0 z-10">
-        <nav class="container mx-auto flex justify-between items-center py-7">
+        <nav class="container mx-auto flex justify-between items-center sm:py-7 py-3 max-sm:px-5">
             <!-- left side -->
             <div class="flex items-center">
-                <h2 class="font-semibold text-xl text-[#18181B]">English</h2>
-                <img src="assets/logo.png" alt="">
-                <h2 class="tiro-bangla text-xl">জানালা</h2>
+                <h2 class="font-semibold sm:text-xl text-[#18181B]">English</h2>
+                <img class="max-sm:w-7" src="assets/logo.png" alt="">
+                <h2 class="tiro-bangla sm:text-xl">জানালা</h2>
             </div>
 
             <!-- right side -->
-            <div class="flex gap-4">
-                <a href="#faq"><button class="btn btn-outline btn-primary "><i class="fa-solid fa-circle-question"></i>
-                    FAQ</button>
-                </a>
+            <div class="hidden sm:block">
+                <div class="flex gap-4 ">
+                    <a href="#faq"><button class="btn btn-outline btn-primary "><i class="fa-solid fa-circle-question"></i>
+                            FAQ</button>
+                    </a>
+                
+                    <a href="#Vocabularies">
+                        <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Learn</button>
+                    </a>
+                
+                    <button id="logout" class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Logout</button>
+                </div>
+            </div>
 
-                <a href="#Vocabularies">
-                    <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Learn</button>
-                </a>
-
-                <button id="logout" class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>                
+            <!-- right side -->
+            <div class=" sm:hidden">
+                <div class="flex gap-2 ">
+                    <a href="#faq"><button class="btn btn-xs btn-outline btn-primary "><i class="fa-solid fa-circle-question"></i>
+                            FAQ</button>
+                    </a>
+            
+                    <a href="#Vocabularies">
+                        <button class="btn btn-xs btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Learn</button>
+                    </a>
+            
+                    <button id="logout" class="btn btn-xs btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Logout</button>
+                </div>
             </div>
         </nav>
         <hr class="border-[#C6BDBD]">
 
     </header>
 
-    
+
 
     <!-- bennar section -->
-    <section id="hide-banner" class="container mx-auto flex justify-between items-center mb-20">
+    <section id="hide-banner" class="container mx-auto flex justify-between items-center sm:mb-20 mb-10">
         <!-- left side -->
-        <div >
-            <h1 class="font-bold text-5xl text-[#18181B]"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
-            <p class="my-6 hind-siliguri font-medium text-2xl text-[#18181B] opacity-80">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive
+        <div class="max-sm:m-5">
+            <h1 class="font-bold sm:text-5xl text-3xl text-[#18181B]"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+            <p class="sm:my-6 my-3 hind-siliguri font-medium sm:text-2xl text-[#18181B] opacity-80">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive
             Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
             <form id="loginForm">
                 <input id="name" type="text" placeholder="Enter Your Name" class="input" /> <br><br>
@@ -85,17 +104,17 @@
         </div>
     
         <!-- right side -->
-        <img src="assets/hero-student.png" alt="">
+        <img class="hidden sm:block" src="assets/hero-student.png" alt="">
     </section>
 
     <main id="hide-main">
         <!-- section-2 Let's Learn Vocabularies -->
-        <section id="Vocabularies" class="container mx-auto pt-32 mb-20">
-            <h1 class="text-center font-bold text-3xl text-[#18181B] mb-10"><span class="text-[#00BCFF]">Let's</span>
+        <section id="Vocabularies" class="container mx-auto sm:pt-32 pt-24 sm:mb-20 mb-10">
+            <h1 class="text-center font-bold sm:text-3xl text-2xl text-[#18181B] sm:mb-10 mb-5"><span class="text-[#00BCFF]">Let's</span>
                 Learn Vocabularies</h1>
 
                 <!-- dynamic button -->
-                <section id="level-container" class="flex justify-center items-center gap-5 mb-10">
+                <section id="level-container" class="flex flex-wrap justify-center  items-center gap-5 sm:mb-10 mb-5">
                     <!-- <div>
                         <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Lesson-1</button>
                     </div> -->
@@ -110,11 +129,11 @@
                 
 
                 <!-- btn press korlee -->
-                <section id="card-container" class="grid grid-cols-3 gap-7 bg-[#F8F8F8] rounded-3xl p-7">
+                <section id="card-container" class="grid sm:grid-cols-3 sm:gap-7 gap-3 bg-[#F8F8F8] rounded-3xl sm:p-7 p-4 max-sm:m-5">
                     <!-- kono kichu select na korle -->
                     <div class="col-span-full text-center py-16 bg-[#F8F8F8] rounded-3xl">
                         <p class="hind-siliguri text-sm text-[#79716B] mb-3">আপনি এখনো কোন Lesson Select করেন নি</p>
-                        <h2 class="hind-siliguri text-4xl font-medium text-[#292524]">একটি Lesson Select করুন।</h2>
+                        <h2 class="hind-siliguri sm:text-4xl text-2xl font-medium text-[#292524]">একটি Lesson Select করুন।</h2>
                     </div>
 
                     
@@ -125,11 +144,11 @@
         </section>
 
         <!-- section-3 Frequently Asked Questions -->
-        <section id="faq" class="container mx-auto mb-52 pt-32">
-            <h1 class="text-center font-bold text-3xl text-[#18181B] mt-6 mb-20"><span class="text-[#00BCFF]">Frequently</span> Asked Questions</h1>
+        <section id="faq" class="container mx-auto sm:mb-52 mb-32 sm:pt-32 pt-20">
+            <h1 class="text-center font-bold sm:text-3xl text-xl text-[#18181B] sm:mt-6 mt-3 sm:mb-20 mb-10"><span class="text-[#00BCFF]">Frequently</span> Asked Questions</h1>
 
             <!-- accordion template -->
-            <div class="space-y-5">
+            <div class="sm:space-y-5 space-y-2 max-sm:m-5">
                 <!-- question-1 -->
                 <div class="collapse collapse-plus bg-base-100 border border-base-300">
                     <input type="radio" name="my-accordion-3" checked="checked" />
@@ -189,29 +208,29 @@
         <hr class="border-[#FFEBEB] border-2">
     </main>
 
-    <footer id="hide-footer" class="container mx-auto flex justify-between items-center">
+    <footer id="hide-footer" class="container mx-auto sm:flex justify-between items-center max-sm:m-5">
         <!-- left side -->
-        <div class="py-24">
+        <div class="sm:py-24 py-10">
             <div class="flex items-center">
-                <h2 class="font-semibold text-xl text-[#18181B]">English</h2>
-                <img src="assets/logo.png" alt="">
-                <h2 class="tiro-bangla text-xl">জানালা</h2>
+                <h2 class="font-semibold sm:text-xl text-[#18181B]">English</h2>
+                <img class="max-sm:w-7" src="assets/logo.png" alt="">
+                <h2 class="tiro-bangla sm:text-xl">জানালা</h2>
             </div>
-            <p class="mt-5 mb-2 font-medium text-xl hind-siliguri">ইংরেজি শিখুন সহজে</p>
+            <p class="sm:mt-5 mt-2 sm:mb-2 font-medium sm:text-xl hind-siliguri">ইংরেজি শিখুন সহজে</p>
             <p class="hind-siliguri">Providing ED-Tech Applications since 2025</p>
         </div>
 
         <!-- right side -->
         <div>
-            <p class="font-semibold text-sm text-[#18181B] mb-4 opacity-60">Follow us</p>
-            <div class="flex gap-4 items-center">
-                <a class="hover:text-blue-800 text-3xl" href="https://www.facebook.com/moshiurict24" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <p class="font-semibold text-sm text-[#18181B] sm:mb-4 mb-2 opacity-60">Follow us</p>
+            <div class="flex sm:gap-4 gap-2 items-center">
+                <a class="hover:text-blue-800 sm:text-3xl text-xl" href="https://www.facebook.com/moshiurict24" target="_blank"><i class="fa-brands fa-facebook"></i></a>
 
-                <a class="hover:text-red-700 text-3xl" href="https://www.youtube.com/@moshiur_01" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a class="hover:text-red-700 sm:text-3xl text-xl" href="https://www.youtube.com/@moshiur_01" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 
-                <a class="hover:text-rose-500 text-3xl" href="https://www.instagram.com/moshiur_ict24/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a class="hover:text-rose-500 sm:text-3xl text-xl" href="https://www.instagram.com/moshiur_ict24/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 
-                <a class="hover:text-black text-3xl" href="https://github.com/Moshiur-Rahman-01" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a class="hover:text-black sm:text-3xl text-xl" href="https://github.com/Moshiur-Rahman-01" target="_blank"><i class="fa-brands fa-github"></i></a>
                 
             </div>
         </div>
