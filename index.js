@@ -86,7 +86,7 @@ function displayCard(datas){
                         <h2 class="hind-siliguri font-semibold text-xl text-[#18181B]">"${dt.meaning != null ? `${dt.meaning}` : `অর্থ নেই`} / ${dt.pronunciation}"</h2>
                         <div class="mt-10 flex justify-between items-center">
                             <button onclick="loadCardDetails(${dt.id})" class="btn bg-[#1A91FF10] border-none"><i class="fa-solid fa-circle-info"></i></button>
-                            <button onclick="pronounceWord(${dt.word})" class="btn bg-[#1A91FF10] border-none"><i class="fa-solid fa-volume-high"></i></button>
+                            <button onclick="pronounceWord('${dt.word}')" class="btn bg-[#1A91FF10] border-none"><i class="fa-solid fa-volume-high"></i></button>
                         </div>
                     </div>
         `
